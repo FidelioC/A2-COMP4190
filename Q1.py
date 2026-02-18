@@ -8,7 +8,14 @@ def queens_puzzle(n) -> list[list[str]]:
     return solutions
 
 
-def backtrack(row, n, queen_positions, board, solutions):
+def backtrack(
+    row: int,
+    n: int,
+    queen_positions: set[tuple[int, int]],
+    board: list[list[str]],
+    solutions: list[list[str]],
+):
+    # solution is found
     if row == n:
         solutions.append(["".join(row) for row in board])
         return
@@ -24,7 +31,9 @@ def backtrack(row, n, queen_positions, board, solutions):
         queen_positions.remove((row, col))
 
 
-def is_attacked(position, queen_positions):
+def is_attacked(
+    position: tuple[int, int], queen_positions: set[tuple[int, int]]
+) -> bool:
     for queen in queen_positions:
         if determine_queen_attack(position, queen):
             return True

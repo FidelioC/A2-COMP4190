@@ -103,4 +103,47 @@
     In other words, the probability of the AI model predicts "object present" or not given an object has been detected previously at Y.
     For instance, $P(X=1 | Y=1)$, is the probability that AI predicts an "object present" given object detected by sensor 1.
 \end{enumerate}
+
+\section*{Problem 6}
+\begin{enumerate}[label=(\alph*)]
+    \item Suppose generate 1000 samples
+    \begin{enumerate}[label=(\arabic*)]
+        \item Expected samples from each pair (X,Y) out of 1000 samples
+        \begin{enumerate}[label=(\Roman*)]
+            \item $(X=0,Y=0) = 1000 * 0.1 = 100$
+            \item $(X=0,Y=1) = 1000 * 0.2 = 200$
+            \item $(X=0,Y=2) = 1000 * 0.1 = 100$
+            \item $(X=1,Y=0) = 1000 * 0.15 = 150$
+            \item $(X=1,Y=1) = 1000 * 0.25 = 250$
+            \item $(X=1,Y=2) = 1000 * 0.2 = 200$
+        \end{enumerate}
+        \item Samples where X = 0. Y = 1
+        \begin{enumerate}[label=(\Roman*)]
+            \item $X = 0 \rightarrow 1000 * (0.1 + 0.2 + 0.1) = 400$
+            \item $Y = 1 \rightarrow 1000 * (0.2 + 0.25) = 450$
+        \end{enumerate}
+    \end{enumerate}
+    
+    \item Simulate sampling, 
+    \begin{enumerate}[label=(\Roman*)]
+        \item by placing 1000 cards in a box. Each card has label (X, Y), where the number of each card match the expected samples from (a)
+        \item mix those 1000 cards
+        \item draw one card at random from the box. This represents one sample from this box
+    \end{enumerate}
+
+    \item The reason why this simulates to conditional probability $P(X | Y)$ is because,
+    by getting the value of Y and restrict the sample only by using that same value of Y. 
+    Meaning that we randomly selects only from the reduced set of samples using that same value of Y.
+    Thus, this relates to the definition of conditional probability, where the probability of getting X 
+    from this reduced set represents $P(X|Y)$, which is the probability of X, given that Y has occured.
+
+    \item Suppose that we generate more and more sample from this distribution. Note the formula of standard deviation.
+    Low standard deviation means that data is consistent. On the other hand, high standard deviation means data has high variability.
+    Since standard deviation is inversely propotional from N, thus, as sample N increases, the standard deviation decreases. 
+    Thus, data is more consistent, and should approach the probabilities in the table.
+\end{enumerate}
+
+\section*{Problem 7}
+
+
 \end{document}

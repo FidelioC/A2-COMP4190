@@ -15,6 +15,82 @@
 \begin{document}
 \maketitle
 
+\section*{Problem 1}
+For my first question I have four different functions
+
+\begin{itemize}
+  \item \textbf{queens\_puzzle}
+  \begin{itemize}
+    \item This function initializes the board with empty cells
+    \item It initializes a set to store the queens positions
+    \item It initializes an array to store the solutions
+    \item It calls the backtrack function
+  \end{itemize}
+
+  \item \textbf{backtrack}
+  \begin{itemize}
+    \item This function is where the backtracking happens
+    \item For each row, it recursively iterates through each column and checks
+          whether placing a queen at that cell is valid
+    \item If the queen can be attacked, it continues to the next column
+    \item If we successfully reach the last row, we add that board to the solution
+  \end{itemize}
+
+  \item \textbf{is\_attacked}
+  \begin{itemize}
+    \item This function will iterate through the queens set and see if the
+    current queen can be attacked by any queen in that set or not
+  \end{itemize}
+  
+  \item \textbf{determine-queen-attack}
+  \begin{itemize}
+    \item This function will check whether two different queen position can attack each other
+  \end{itemize}
+
+\end{itemize}
+    
+\section*{Problem 2}
+    \begin{itemize}
+    \item \textbf{words-from-board}
+    \begin{itemize}
+        \item This function will iterate through each word, and the board
+        \item Check whether if the current word matches any word on the board
+        \item Will use the backtrack algorithm to check whether the word match or no
+    \end{itemize}
+
+    \item \textbf{backtrack}
+    \begin{itemize}
+        \item This function is where the backtracking happens
+        \item Will iterate through each cell neighbor
+        \item Will check if the cell has been visited or not
+        \item For each neighbor, if the character is still the same as the word,
+        \item It will keep going deeper,
+        \item else, it will backtrack
+    \end{itemize}
+
+    \item \textbf{FindNeighbors}
+    \begin{itemize}
+       \item Given a specific entry (row, col), this function will calculate the neighbors
+       for that specific (row, col)
+    \end{itemize}
+
+    \end{itemize}
+
+\section*{Problem 3}
+    \begin{itemize}
+    \item \textbf{piles}
+    \begin{itemize}
+        \item Using dynamic programming,
+        \item first, it will initialize the calculation when there's only 1 pile left
+        \item calculating and saving for each possible pile
+        \item Then, it will iterate through each possible pile, e.g., 2,3,4,..n. 
+        \item And calculate the outcome of when we take the left pile or the right pile
+        \item will choose the best possible outcome (max)
+        \item Lastly, if we have calculated each entry, if the last entry is bigger than 0. 
+        \item That means that Alice wins the game
+    \end{itemize}
+
+    \end{itemize}
 \section*{Problem 4}
 
 \begin{enumerate}[label=(\alph*)]
@@ -57,7 +133,23 @@
           - minimax corresponds to a worst-case guarantee for MAX because just below MAX, there's 
           MIN which forces MAX to choose the best out of the worst (MAX's worst case). Thus, a worst-case guarantee.
 
-    \item 
+    \item Optimization
+    \begin{enumerate}[label=(\roman*)]
+        \item The reason why performing a min after max gives min more control over the final outcome is because
+        if minimization is done after maximization, and the min moves second, thus, will choose the worst possible outcome
+        for the last maximizer. By choosing the worst possible outcome for the max, minimizer can force the final value as small as possible.
+        Thus, gives the minimizing player more control over the final outcome.
+
+        \item 
+        \begin{align}
+            V &= \max_{a} \min_{b} \max_{c \in children(b)} LeafValue(a,b,c) \\
+            &= \max_{a} \min_{b} g(a,b)
+        \end{align}
+
+        \item compare
+        
+        \item Suppose equal 
+    \end{enumerate}
 \end{enumerate}
 
 \section*{Problem 5}

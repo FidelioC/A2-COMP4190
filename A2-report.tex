@@ -1,0 +1,106 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\setlength{\mathindent}{0pt}
+\allowdisplaybreaks
+
+\title{COMP 4190 Assignment 2 Answer}
+\author{Fidelio Ciandy, 7934456}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Problem 4}
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+        \begin{tikzpicture}[
+        level distance=1.5cm,
+        level 1/.style={sibling distance=7cm},
+        level 2/.style={sibling distance=3cm},
+        level 3/.style={sibling distance=1.5cm},
+        every node/.style={circle, draw, minimum size=9mm, align=center},
+        edge from parent/.style={draw,-}
+        ]
+
+        \node {MAX {= 6}}
+        child { node {A = 4\\\small MIN}
+            child { node {A1 = 5\\\small MAX}
+            child { node {3} }
+            child { node {5} }
+            }
+            child { node {A2 = 4\\\small MAX}
+            child { node {2} }
+            child { node {4} }
+            }
+        }
+        child { node {B = 6\\\small MIN}
+            child { node {B1 = 6\\\small MAX}
+            child { node {6} }
+            child { node {1} }
+            }
+            child { node {B2 = 7\\\small MAX}
+            child { node {0} }
+            child { node {7} }
+            }
+        };
+
+        \end{tikzpicture}
+
+    \item - Based on my computation, MAX should choose the right side at the root. \\
+          - 6 is the payoff MAX can guarantee despite MIN's action \\
+          - minimax corresponds to a worst-case guarantee for MAX because just below MAX, there's 
+          MIN which forces MAX to choose the best out of the worst (MAX's worst case). Thus, a worst-case guarantee.
+
+    \item 
+\end{enumerate}
+
+\section*{Problem 5}
+
+\begin{enumerate}[label=(\alph*)]
+
+    \item\[\sum_X \sum_Y P(X=x, Y=y)= 0.10 + 0.20 + 0.10 + 0.15 + 0.25 + 0.20 = 1\]
+    \item\[P(X=0) = 0.10 + 0.20 + 0.10 = 0.40\]
+    \[P(X=1) = 0.15 + 0.25 + 0.20 = 0.60\]
+    \[P(Y=0) = 0.10 + 0.15 = 0.25\]
+    \[P(Y=1) = 0.20 + 0.25 = 0.45\]
+    \[P(Y=2) = 0.10 + 0.20 = 0.30\]
+
+    \item Conditional probability formula:
+    \[P(X \mid Y) = \frac{P(X \cap Y)}{P(Y)}\]
+    Bayes' theorem:
+    \[P(X \mid Y) = \frac{P(X)\,P(Y \mid X)}{P(Y)}\]
+    \[P(X=1 \mid Y=1)= \frac{0.6(0.25/0.6)}{0.45}= 0.56\]
+    \[P(Y=2 \mid X=1)= \frac{0.3(0.20/0.3)}{0.6}= 0.33\]
+    \[P(X=0 \mid Y=0)= \frac{0.10}{0.25}= 0.40\]
+
+    \item
+    \[P(X=0 \mid Y=1) = \frac{0.2}{0.45} = 0.44\]
+    \[P(X=1 \mid Y=1) = \frac{0.25}{0.45} = 0.56\]
+    \[P(Y=0 \mid X=0) = \frac{0.1}{0.4} = 0.25\]
+    \[P(Y=1 \mid X=0) = \frac{0.2}{0.4} = 0.5\]
+    \[P(Y=2 \mid X=0) = \frac{0.1}{0.4} = 0.25\]
+
+    \item Conditional probability identity: \\
+    if $P(A|B) = P(A) \text{ and } P(B|A) = P(B)$, then events A and B are independent. \\
+    Seeing from $P(X=0 \mid Y=1) = \frac{0.2}{0.45} = 0.44$ and $P(X=0) = 0.10 + 0.20 + 0.10 = 0.40$ \\
+    $ 0.44 \neq 0.40 $, thus, X and Y are not independent.
+
+    \item 
+    1. Joint probability $P(X,Y) \rightarrow$ the probability that both happens at the same time. 
+    In other words, the probability that the AI model correctly predicts "object" at a specific sensor.
+    For instance, $P(X=1, Y=1)$, meaning that probability of AI model predict "yes" and the object actually present at Y = 1 is 0.2
+
+    2. Marginal probability $P_x(X) \rightarrow$ the probability of X alone, ignoring Y. 
+    In other words, the probability that the object present or not present, independent of Y.
+
+    3. Conditional probability $P(X | Y) \rightarrow$ the probability of X given that Y already happened.
+    In other words, the probability of the AI model predicts "object present" or not given an object has been detected previously at Y.
+    For instance, $P(X=1 | Y=1)$, is the probability that AI predicts an "object present" given object detected by sensor 1.
+\end{enumerate}
+\end{document}

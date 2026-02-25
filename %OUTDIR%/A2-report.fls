@@ -1,7 +1,7 @@
 PWD c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190
 INPUT C:\Users\Fidelio\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
 INPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\A2-report.tex
-OUTPUT A2-report.log
+OUTPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.log
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\latex\base\fleqn.clo
@@ -158,10 +158,10 @@ INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlay
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytrees.code.tex
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\A2-report.aux
-INPUT .\A2-report.aux
-INPUT A2-report.aux
-OUTPUT A2-report.aux
+INPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.aux
+INPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.aux
+INPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.aux
+OUTPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.aux
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -192,7 +192,7 @@ INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.t
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT A2-report.pdf
+OUTPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.pdf
 INPUT C:\Users\Fidelio\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
@@ -212,7 +212,7 @@ INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\s
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT A2-report.aux
+INPUT c:\Users\Fidelio\Courses\COMP4190\A2-COMP4190\%OUTDIR%\A2-report.aux
 INPUT C:\Users\Fidelio\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Fidelio\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Fidelio\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

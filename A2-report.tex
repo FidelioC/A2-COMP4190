@@ -105,22 +105,22 @@ For my first question I have four different functions
         ]
 
         \node {MAX {= 6}}
-        child { node {A = 4\\\small MIN}
-            child { node {A1 = 5\\\small MAX}
+        child { node {A1 = 4\\\small MIN}
+            child { node {B1 = 5\\\small MAX}
             child { node {3} }
             child { node {5} }
             }
-            child { node {A2 = 4\\\small MAX}
+            child { node {B2 = 4\\\small MAX}
             child { node {2} }
             child { node {4} }
             }
         }
-        child { node {B = 6\\\small MIN}
-            child { node {B1 = 6\\\small MAX}
+        child { node {A2 = 6\\\small MIN}
+            child { node {B3 = 6\\\small MAX}
             child { node {6} }
             child { node {1} }
             }
-            child { node {B2 = 7\\\small MAX}
+            child { node {B4 = 7\\\small MAX}
             child { node {0} }
             child { node {7} }
             }
@@ -145,10 +145,68 @@ For my first question I have four different functions
             V &= \max_{a} \min_{b} \max_{c \in children(b)} LeafValue(a,b,c) \\
             &= \max_{a} \min_{b} g(a,b)
         \end{align}
-
-        \item compare
+        Lets try to compute the tree using the formula
+            \[ V = \max_{A1, A2} (\min_{B1, B2} (g(A1, B1), g(A1, B2)), \min_{B3, B4} (g(A2,B3), g(A2, B4))) \\
+            \]
+            \[ 
+            = max (min (max(3,5), max(2,4)), min(max(6,1), max(0,7)))
+            \]
+            \[ 
+            = 6
+            \]
+        \item \[\text{compare } \max_{a}\min_{b} g(a,b) \text{ and } \min_{b}\max_{a} g(a,b)\]
+        \[\text{Compute} \rightarrow \min_{b}\max_{a} g(a,b)\]
+        Since min goes last but the "max" doesn't know what value min is going to choose, 
+        there could be 4 different choices that min will choose:
+        \begin{enumerate}
+            \item B1, B3
+            \item B1, B4
+            \item B2, B3
+            \item B2, B4
+        \end{enumerate}
         
-        \item Suppose equal 
+        Thus we define:
+        \[
+        b \in \{(B1,B3),(B1,B4),(B2,B3),(B2,B4)\}, 
+        \quad
+        a \in \{A1,A2\}
+        \]
+        
+        For each such pair $b=(b_1,b_2)$, we compute:
+        \[
+        \max_{a} \; (g(A1,b_1),\; g(A2,b_2))
+        \]
+
+        \begin{enumerate}
+            \item  \textbf{Evaluate:}  $b=(B1,B3)$
+            \[
+            \max_{a} ( g(A1,B1),\; g(A2,B3)) = max(max(3,5), max(6,1)) = 6
+            \]
+            
+            \item \textbf{Evaluate:}  $b=(B1,B4)$
+            \[
+            \max_{a} ( g(A1,B1),\; g(A2,B4)) = max(max(3,5), max(0,7)) = 7
+            \]
+
+            \item \textbf{Evaluate:}  $b=(B2,B3)$
+            \[
+            \max_{a} ( g(A1,B2),\; g(A2,B3)) = max(max(2,4), max(6,1)) = 6
+            \]
+
+            \item \textbf{Evaluate:}  $b=(B2,B4)$
+            \[
+            \max_{a} ( g(A1,B2),\; g(A2,B4)) = max(max(2,4), max(0,7)) = 7
+            \]
+        \end{enumerate}
+
+        After calculating all this, min will choose the minimum value, thus $ Vmin = 6 $
+
+        From part (2), the game value V is also 6. Thus, they are equal
+
+        \item Suppose two quantities above are equal. This is what's called the Minimax Theorem, the one that's being shown in the slides.
+              It implies that revealing the optimal strategy doesn't hurt you. Meaning that, neither player has 
+              any benefits from changing strategy or moving order. Thus, the game has a stable optimal strategies.
+        
     \end{enumerate}
 \end{enumerate}
 

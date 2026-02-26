@@ -20,7 +20,6 @@ def dp_pile_stones_game(piles: list) -> bool:
 
 def main():
     piles: list = [3, 7, 2, 3]
-
     solution = dp_pile_stones_game(piles)
     print(solution)
 

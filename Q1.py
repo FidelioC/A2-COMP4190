@@ -66,7 +66,8 @@ def determine_queen_attack(position_one: tuple, position_two: tuple) -> bool:
 
 
 def main():
-    solutions = queens_puzzle(4)
+    input = 4
+    solutions = queens_puzzle(input)
     print(solutions)
 
 

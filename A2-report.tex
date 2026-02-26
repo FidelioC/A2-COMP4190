@@ -141,10 +141,10 @@ For my first question I have four different functions
         Thus, gives the minimizing player more control over the final outcome.
 
         \item 
-        \begin{align}
+        \begin{align*}
             V &= \max_{a} \min_{b} \max_{c \in children(b)} LeafValue(a,b,c) \\
             &= \max_{a} \min_{b} g(a,b)
-        \end{align}
+        \end{align*}
         Lets try to compute the tree using the formula
             \[ V = \max_{A1, A2} (\min_{B1, B2} (g(A1, B1), g(A1, B2)), \min_{B3, B4} (g(A2,B3), g(A2, B4))) \\
             \]
@@ -295,5 +295,25 @@ For my first question I have four different functions
 
 \section*{Problem 7}
 
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    \begin{align*}
+    & \int_{-\infty}^{\infty} C \; exp(\frac{(x-\mu)^2}{2\sigma^2}) dx = 1 \\
+    & \text{Let } u = x - \mu \\
+    & \frac{du}{dx} = \frac{d}{dx} (x - \mu) \\
+    & \frac{du}{dx} = 1 \\
+    & du = dx \\
+    & \int_{-\infty}^{\infty} C \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
+    & C \int_{-\infty}^{\infty} \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
+    & \text{Let a } = \frac{1}{2\sigma^2} \\
+    & \text{Solve for } \rightarrow \int_{-\infty}^{\infty} \; exp(-au^2) du \\
+    & \text{Using the Gaussian Integral Property, the above calculation will simplify to } \\
+    & \int_{-\infty}^{\infty} \; exp(-au^2) du = \sqrt{\frac{\pi}{a}}\\
+    & \text{Now, solve for C }\\
+    & C \;\sqrt{\frac{\pi}{a}} = 1 \\
+    & C \;\sqrt{\frac{\pi}{\frac{1}{2\sigma^2}}} = 1 \\
+    & C = \frac{1}{\sigma\sqrt{2\pi}} \\
+    \end{align*}
+\end{enumerate}
 
 \end{document}

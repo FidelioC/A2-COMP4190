@@ -298,22 +298,87 @@ For my first question I have four different functions
 \begin{enumerate}[label=(\alph*)]
     \item 
     \begin{align*}
-    & \int_{-\infty}^{\infty} C \; exp(\frac{(x-\mu)^2}{2\sigma^2}) dx = 1 \\
-    & \text{Let } u = x - \mu \\
-    & \frac{du}{dx} = \frac{d}{dx} (x - \mu) \\
-    & \frac{du}{dx} = 1 \\
-    & du = dx \\
-    & \int_{-\infty}^{\infty} C \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
-    & C \int_{-\infty}^{\infty} \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
-    & \text{Let a } = \frac{1}{2\sigma^2} \\
-    & \text{Solve for } \rightarrow \int_{-\infty}^{\infty} \; exp(-au^2) du \\
-    & \text{Using the Gaussian Integral Property, the above calculation will simplify to } \\
-    & \int_{-\infty}^{\infty} \; exp(-au^2) du = \sqrt{\frac{\pi}{a}}\\
-    & \text{Now, solve for C }\\
-    & C \;\sqrt{\frac{\pi}{a}} = 1 \\
-    & C \;\sqrt{\frac{\pi}{\frac{1}{2\sigma^2}}} = 1 \\
-    & C = \frac{1}{\sigma\sqrt{2\pi}} \\
+        & \int_{-\infty}^{\infty} C \; exp(-\frac{(x-\mu)^2}{2\sigma^2}) dx = 1 \\
+        & \text{Let } u = x - \mu \\
+        & \frac{du}{dx} = \frac{d}{dx} (x - \mu) \\
+        & \frac{du}{dx} = 1 \\
+        & du = dx \\
+        & \int_{-\infty}^{\infty} C \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
+        & C \int_{-\infty}^{\infty} \; exp(-\frac{u^2}{2\sigma^2}) du = 1 \\
+        & \text{Let a } = \frac{1}{2\sigma^2} \\
+        & \text{Solve for } \rightarrow \int_{-\infty}^{\infty} \; exp(-au^2) du \\
+        & \text{Using the Gaussian Integral Property, the above calculation will simplify to } \\
+        & \int_{-\infty}^{\infty} \; exp(-au^2) du = \sqrt{\frac{\pi}{a}}\\
+        & \text{Now, solve for C }\\
+        & C \;\sqrt{\frac{\pi}{a}} = 1 \\
+        & C \;\sqrt{\frac{\pi}{\frac{1}{2\sigma^2}}} = 1 \\
+        & C = \frac{1}{\sigma\sqrt{2\pi}} \\
     \end{align*}
+
+    \item 
+    \begin{align*}
+        & E[X] = \int_{-\infty}^{\infty} x \frac{1}{\sigma\sqrt{2\pi}} \; exp(-\frac{(x-\mu)^2}{2\sigma^2}) dx \\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^{\infty} x \; exp(-\frac{(x-\mu)^2}{2\sigma^2}) dx \\
+        & \text{Let } u = x - \mu \\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^{\infty} (u + \mu) \; exp(-\frac{u^2}{2\sigma^2}) dx \\
+        & = \frac{1}{\sigma\sqrt{2\pi}} [\int_{-\infty}^{\infty} u \; exp(-\frac{u^2}{2\sigma^2}) du + 
+                                        \mu \int_{-\infty}^{\infty} \; exp(-\frac{u^2}{2\sigma^2}) du] \\
+        & \text{Since, } u \; exp(-\frac{u^2}{2\sigma^2}) \text{ is an odd function. By even and odd integral theorem, } \\
+        & \int_{-\infty}^{\infty} u \; exp(-\frac{u^2}{2\sigma^2}) du = 0 \\
+        & \text{Thus, }\\
+        & = \frac{1}{\sigma\sqrt{2\pi}} [0 + \mu \int_{-\infty}^{\infty} \; exp(-\frac{u^2}{2\sigma^2}) du] \\
+        & \text{From the question (a), we can simplify this to }\\
+        & = \frac{1}{\sigma\sqrt{2\pi}} [\mu\sigma\sqrt{2\pi}] \\
+        & = \mu \\
+    \end{align*}
+
+    \item 
+    \begin{align*}
+        & Var(X) = E[(X-\mu)^2]\\
+        & Var(X) = \int_{-\infty}^{\infty} (x-\mu)^2 \frac{1}{\sigma\sqrt{2\pi}} \; exp(-\frac{(x-\mu)^2}{2\sigma^2}) dx \; \text{ ..From part (b)}\\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^{\infty} (x-\mu)^2  \; exp(-\frac{(x-\mu)^2}{2\sigma^2}) dx\\
+        & \text{Let } u = x - \mu \\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^{\infty} u^2  \; exp(-\frac{u^2}{2\sigma^2}) du\\
+        & \text{Let a } = \frac{1}{2\sigma^2} \text{ Solve for: }\\
+        & \int_{-\infty}^{\infty} u^2  \; exp(-au^2) du \\
+        & \text{Using Integral of Gaussian Properties }\\
+        & \int_{-\infty}^{\infty} u^2  \; exp(-au^2) du = \frac{1}{2a} \sqrt{\frac{\pi}{a}}\\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \frac{1}{2a} \sqrt{\frac{\pi}{a}} \\
+        & \text{Subtitute back a: } \\
+        & = \frac{1}{\sigma\sqrt{2\pi}} \sigma^3 \sqrt{2\pi} \\
+        & = \sigma^2 \\
+    \end{align*}
+
+    \item 
+    \begin{align*}
+        & Z = \frac{X-\mu}{\sigma}\\    
+        & E[Z] = E[\frac{X-\mu}{\sigma}]\\
+        & = \frac{1}{\sigma}E[X-\mu]\\
+        & = \frac{1}{\sigma}(E[X]-\mu)\\
+        & = \frac{1}{\sigma}(\mu-\mu) \text{ ... From previous question (b)}\\
+        & E[Z] = \mu = 0 \; \text{ ...(1)}\\
+        \\
+        & Var(Z) = E[(Z - \mu)^2] \\
+        & Var(Z) = E[(Z - 0)^2] \text{ ... From (1)}\\
+        & Var(Z) = E[(Z)^2] \\
+        & Var(Z) = E[(\frac{X-\mu}{\sigma})^2] \\
+        & Var(Z) = \frac{1}{\sigma^2}E[({X-\mu})^2] \\
+        & Var(Z) = \frac{1}{\sigma^2}\sigma^2 \text{ ... From part (c)}\\
+        & Var(Z) = 1 \; \text{ ...(2)}\\
+        & \\
+        & \text{ Thus, from (1) and (2), Z follows the standard normal distribution with mean 0 and variance 1}
+    \end{align*}
+
+    \item 
+    \begin{enumerate}[label=(\Roman*)]
+        \item $\mu \rightarrow$ represents the average of whether is the noise represent the true value or no. In other words, the average error of predicting the noise.
+        \item $\sigma^2 \rightarrow$ represents the degree of spread, whether the prediction is certain or not. \\
+        If high $\rightarrow$ meaning lot of spread in the prediction, not certain. \\
+        Else, if low $\rightarrow$  meaning less spread in the prediction, more certain with the noise prediction.
+        \item Why larger $\sigma^2$ means higher uncertainty? 
+        As mention previously, higher variance means that data are widely spread out, predictions of noises are vary. 
+        Thus, it's more uncertain in predictions.
+    \end{enumerate}
 \end{enumerate}
 
 \end{document}

@@ -11,3 +11,8 @@
 - And inside main(), there are named variables that will be used as an input to the function.
 - You can change those named variables to your desired input.
 - To run the program, you can write `python {file_name}` in the terminal
+
+## Reference for theoretical questions
+
+- [Gaussian Integral](https://quantummechanics.ucsd.edu/ph130a/130_notes/node87.html)
+- [Theorem 1.2.12. Even and Odd](https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic/sec_def_int.html)

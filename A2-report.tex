@@ -309,6 +309,17 @@ For my first question I have four different functions
         & \text{Solve for } \rightarrow \int_{-\infty}^{\infty} \; exp(-au^2) du \\
         & \text{Using the Gaussian Integral Property, the above calculation will simplify to } \\
         & \int_{-\infty}^{\infty} \; exp(-au^2) du = \sqrt{\frac{\pi}{a}}\\
+        & \text{Prove of Gaussian Integral Property: }\\
+        & \text{Let } I = \int_{-\infty}^{\infty} \; exp(-ax^2) dx\\
+        & \text{Integrate over both x and y: }\\
+        & I^2 = \int_{-\infty}^{\infty} \; exp(-ax^2) dx \int_{-\infty}^{\infty} \; exp(-ay^2) dy\\
+        & = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \; exp(-a(x^2 + y^2)) dx dy\\
+        & \text{Transform to polar coordinates: }\\
+        & = 2\pi\int_{0}^{\infty} \; r exp(-ar^2) dr\\
+        & = \pi\int_{0}^{\infty} \; d(r^2) exp(-ar^2)\\
+        & = \pi \left[ -\frac{1}{a} e^{-a r^2} \right]_{0}^{\infty} = \frac{\pi}{a}\\
+        & \text{Take the root square }\\
+        & = \sqrt{\frac{\pi}{a}}\\
         & \text{Now, solve for C }\\
         & C \;\sqrt{\frac{\pi}{a}} = 1 \\
         & C \;\sqrt{\frac{\pi}{\frac{1}{2\sigma^2}}} = 1 \\

@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1771716669.87099 "c:/Users/Fidelio/Courses/COMP4190/A2-COMP4190/A2-report.tex" "A2-report.pdf" "A2-report" 1771716670.5335 0
-  "A2-report.aux" 1771716670 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "A2-report.tex" 1771716669 9971 1d0a49be4fced66f1b7ef59c89232cdd ""
+["pdflatex"] 1772226200.65219 "c:/Users/Fidelio/Courses/COMP4190/A2-COMP4190/A2-report.tex" "A2-report.pdf" "A2-report" 1772226201.20783 0
+  "A2-report.aux" 1772226201 32 1b174032087fb90900fa6203d3bb0a7e "pdflatex"
+  "A2-report.tex" 1772226200 17718 84816f893a656c77ed67aa12de5ac99d ""
   "C:/Users/Fidelio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1769493516 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Fidelio/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1769483552 14064 6d370be21f6f9a0266f41a0bead9afae ""
   "C:/Users/Fidelio/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1769402904 13334455 66d29163ac7c1945cf6caffd54f59609 ""
@@ -32,6 +32,7 @@
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
@@ -128,7 +129,7 @@
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" 1756451144 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/Fidelio/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Fidelio/Courses/COMP4190/A2-COMP4190/A2-report.tex" 1771716669 9971 1d0a49be4fced66f1b7ef59c89232cdd ""
+  "c:/Users/Fidelio/Courses/COMP4190/A2-COMP4190/A2-report.tex" 1772226200 17718 84816f893a656c77ed67aa12de5ac99d ""
   (generated)
   "A2-report.aux"
   "A2-report.log"
